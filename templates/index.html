@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuoteVault 100 — Curated Quote Explorer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <span class="eyebrow">Curated Wisdom Collection</span>
+        <h1>QuoteVault <span class="accent">100</span></h1>
+        <p class="subtitle">Discover random inspiration or search across 100 timeless quotes by author and category.</p>
+      </div>
+      <div class="stats-pill" id="header-stats" aria-live="polite">
+        <span id="stat-total">100</span> Quotes &middot; <span id="stat-authors">0</span> Authors &middot; <span id="stat-categories">0</span> Categories
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Spotlight Random Quote Section -->
+    <section class="spotlight-section" aria-labelledby="spotlight-heading">
+      <div class="spotlight-card" id="spotlight-card">
+        <div class="spotlight-top-bar">
+          <span class="spotlight-label" id="spotlight-heading">Featured Random Quote</span>
+          <span class="quote-number-badge" id="spotlight-id">#1 of 100</span>
+        </div>
+
+        <blockquote class="spotlight-quote" id="spotlight-quote-text">
+          Loading a timeless quote&hellip;
+        </blockquote>
+
+        <div class="spotlight-meta">
+          <button type="button" class="author-chip" id="spotlight-author" title="Filter quotes by this author">
+            &mdash;
+          </button>
+          <div class="category-tags" id="spotlight-categories"></div>
+        </div>
+
+        <div class="spotlight-actions">
+          <button type="button" class="btn btn-primary" id="btn-random-all">
+            <span class="btn-icon" aria-hidden="true">&#x21bb;</span>
+            Random Quote (All 100)
+          </button>
+          <button type="button" class="btn btn-secondary" id="btn-random-filtered" hidden>
+            <span class="btn-icon" aria-hidden="true">&#x2728;</span>
+            Random from Current Filter
+          </button>
+          <button type="button" class="btn btn-ghost" id="btn-copy-spotlight">
+            Copy Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="filter-section" aria-labelledby="filter-heading">
+      <div class="filter-header">
+        <h2 id="filter-heading">Search &amp; Filter Quotes</h2>
+        <button type="button" class="btn-link" id="btn-clear-filters" hidden>
+          Clear All Filters
+        </button>
+      </div>
+
+      <div class="search-inputs-grid">
+        <div class="input-group">
+          <label for="author-input">Search by Author</label>
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="author-input"
+              list="authors-datalist"
+              placeholder="e.g. Albert Einstein, Mark Twain, Maya Angelou..."
+              autocomplete="off"
+            />
+            <button type="button" class="input-clear-btn" id="clear-author-btn" title="Clear author filter" hidden>&times;</button>
+          </div>
+          <datalist id="authors-datalist"></datalist>
+        </div>
+
+        <div class="input-group">
+          <label for="category-select">Category Dropdown</label>
+          <select id="category-select">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="category-pills-wrapper">
+        <span class="pills-label">Quick Categories:</span>
+        <div class="category-pills" id="category-pills" role="group" aria-label="Filter by category">
+          <button type="button" class="pill active" data-category="">All (100)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-toolbar">
+        <h2 id="results-heading">
+          Matching Quotes
+          <span class="results-count" id="results-count">(100 of 100)</span>
+        </h2>
+        <div class="active-filters-summary" id="active-filters-summary"></div>
+      </div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <p class="empty-title">No quotes match your current filters.</p>
+        <p class="empty-subtitle">Try clearing the author search or selecting a different category.</p>
+        <button type="button" class="btn btn-secondary" id="btn-empty-reset">Reset Filters</button>
+      </div>
+
+      <div class="quotes-grid" id="quotes-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with Python Flask &amp; Vanilla JavaScript &middot; 100 Well-Known Quotes</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>Copied to clipboard!</div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

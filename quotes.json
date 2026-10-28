@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "categories": ["Inspiration", "Success", "Leadership"]
+  },
+  {
+    "id": 2,
+    "quote": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world.",
+    "author": "Albert Einstein",
+    "categories": ["Science", "Wisdom", "Inspiration"]
+  },
+  {
+    "id": 3,
+    "quote": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "categories": ["Philosophy", "Wisdom", "Life"]
+  },
+  {
+    "id": 4,
+    "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["Courage", "Wisdom", "Life"]
+  },
+  {
+    "id": 5,
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "categories": ["Success", "Inspiration"]
+  },
+  {
+    "id": 6,
+    "quote": "In the middle of difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "categories": ["Wisdom", "Inspiration", "Courage"]
+  },
+  {
+    "id": 7,
+    "quote": "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
+    "author": "Marie Curie",
+    "categories": ["Science", "Courage", "Wisdom"]
+  },
+  {
+    "id": 8,
+    "quote": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "categories": ["Courage", "Inspiration", "Success"]
+  },
+  {
+    "id": 9,
+    "quote": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "categories": ["Humor", "Wisdom", "Life"]
+  },
+  {
+    "id": 10,
+    "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas A. Edison",
+    "categories": ["Science", "Success", "Inspiration"]
+  },
+  {
+    "id": 11,
+    "quote": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "author": "Aristotle",
+    "categories": ["Philosophy", "Success", "Wisdom"]
+  },
+  {
+    "id": 12,
+    "quote": "Do what you can, with what you have, where you are.",
+    "author": "Theodore Roosevelt",
+    "categories": ["Courage", "Leadership", "Inspiration"]
+  },
+  {
+    "id": 13,
+    "quote": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "categories": ["Happiness", "Wisdom", "Life"]
+  },
+  {
+    "id": 14,
+    "quote": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain",
+    "categories": ["Humor", "Wisdom", "Life"]
+  },
+  {
+    "id": 15,
+    "quote": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "categories": ["Philosophy", "Wisdom", "Inspiration"]
+  },
+  {
+    "id": 16,
+    "quote": "That which does not kill us makes us stronger.",
+    "author": "Friedrich Nietzsche",
+    "categories": ["Philosophy", "Courage", "Life"]
+  },
+  {
+    "id": 17,
+    "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "categories": ["Courage", "Success", "Leadership"]
+  },
+  {
+    "id": 18,
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "categories": ["Life", "Wisdom"]
+  },
+  {
+    "id": 19,
+    "quote": "You miss 100% of the shots you don't take.",
+    "author": "Wayne Gretzky",
+    "categories": ["Success", "Courage", "Inspiration"]
+  },
+  {
+    "id": 20,
+    "quote": "Whether you think you can, or you think you can't—you're right.",
+    "author": "Henry Ford",
+    "categories": ["Success", "Inspiration", "Leadership"]
+  },
+  {
+    "id": 21,
+    "quote": "I think, therefore I am.",
+    "author": "René Descartes",
+    "categories": ["Philosophy", "Wisdom"]
+  },
+  {
+    "id": 22,
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["Inspiration", "Courage", "Success"]
+  },
+  {
+    "id": 23,
+    "quote": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    "author": "Benjamin Franklin",
+    "categories": ["Wisdom", "Leadership", "Life"]
+  },
+  {
+    "id": 24,
+    "quote": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay",
+    "categories": ["Science", "Inspiration", "Leadership"]
+  },
+  {
+    "id": 25,
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "categories": ["Philosophy", "Wisdom", "Success"]
+  },
+  {
+    "id": 26,
+    "quote": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+    "author": "Martin Luther King Jr.",
+    "categories": ["Leadership", "Wisdom", "Courage"]
+  },
+  {
+    "id": 27,
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein",
+    "categories": ["Success", "Wisdom", "Life"]
+  },
+  {
+    "id": 28,
+    "quote": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    "author": "Albert Einstein",
+    "categories": ["Humor", "Science", "Wisdom"]
+  },
+  {
+    "id": 29,
+    "quote": "People will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+    "author": "Maya Angelou",
+    "categories": ["Wisdom", "Life", "Leadership"]
+  },
+  {
+    "id": 30,
+    "quote": "A room without books is like a body without a soul.",
+    "author": "Marcus Tullius Cicero",
+    "categories": ["Philosophy", "Wisdom", "Life"]
+  },
+  {
+    "id": 31,
+    "quote": "You only live once, but if you do it right, once is enough.",
+    "author": "Mae West",
+    "categories": ["Humor", "Life", "Happiness"]
+  },
+  {
+    "id": 32,
+    "quote": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "categories": ["Inspiration", "Leadership", "Wisdom"]
+  },
+  {
+    "id": 33,
+    "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+    "author": "Robert Frost",
+    "categories": ["Life", "Wisdom"]
+  },
+  {
+    "id": 34,
+    "quote": "To live is the rarest thing in the world. Most people exist, that is all.",
+    "author": "Oscar Wilde",
+    "categories": ["Life", "Philosophy", "Wisdom"]
+  },
+  {
+    "id": 35,
+    "quote": "Always forgive your enemies; nothing annoys them so much.",
+    "author": "Oscar Wilde",
+    "categories": ["Humor", "Life"]
+  },
+  {
+    "id": 36,
+    "quote": "Somewhere, something incredible is waiting to be known.",
+    "author": "Carl Sagan",
+    "categories": ["Science", "Inspiration", "Wisdom"]
+  },
+  {
+    "id": 37,
+    "quote": "Equipped with his five senses, man explores the universe around him and calls the adventure Science.",
+    "author": "Edwin Hubble",
+    "categories": ["Science", "Inspiration"]
+  },
+  {
+    "id": 38,
+    "quote": "The good thing about science is that it's true whether or not you believe in it.",
+    "author": "Neil deGrasse Tyson",
+    "categories": ["Science", "Wisdom", "Humor"]
+  },
+  {
+    "id": 39,
+    "quote": "If I have seen further it is by standing on the shoulders of Giants.",
+    "author": "Isaac Newton",
+    "categories": ["Science", "Wisdom", "Leadership"]
+  },
+  {
+    "id": 40,
+    "quote": "An investment in knowledge pays the best interest.",
+    "author": "Benjamin Franklin",
+    "categories": ["Wisdom", "Success"]
+  },
+  {
+    "id": 41,
+    "quote": "Courage is grace under pressure.",
+    "author": "Ernest Hemingway",
+    "categories": ["Courage", "Wisdom"]
+  },
+  {
+    "id": 42,
+    "quote": "It is during our darkest moments that we must focus to see the light.",
+    "author": "Aristotle",
+    "categories": ["Philosophy", "Courage", "Inspiration"]
+  },
+  {
+    "id": 43,
+    "quote": "Whoever is happy will make others happy too.",
+    "author": "Anne Frank",
+    "categories": ["Happiness", "Inspiration", "Life"]
+  },
+  {
+    "id": 44,
+    "quote": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["Leadership", "Courage", "Inspiration"]
+  },
+  {
+    "id": 45,
+    "quote": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "author": "Mother Teresa",
+    "categories": ["Happiness", "Life", "Inspiration"]
+  },
+  {
+    "id": 46,
+    "quote": "When you reach the end of your rope, tie a knot in it and hang on.",
+    "author": "Franklin D. Roosevelt",
+    "categories": ["Courage", "Inspiration", "Humor"]
+  },
+  {
+    "id": 47,
+    "quote": "Don't judge each day by the harvest you reap but by the seeds that you plant.",
+    "author": "Robert Louis Stevenson",
+    "categories": ["Wisdom", "Life", "Success"]
+  },
+  {
+    "id": 48,
+    "quote": "The only impossible journey is the one you never begin.",
+    "author": "Tony Robbins",
+    "categories": ["Inspiration", "Success", "Courage"]
+  },
+  {
+    "id": 49,
+    "quote": "Only a life lived for others is a life worthwhile.",
+    "author": "Albert Einstein",
+    "categories": ["Life", "Wisdom", "Happiness"]
+  },
+  {
+    "id": 50,
+    "quote": "The purpose of our lives is to be happy.",
+    "author": "Dalai Lama",
+    "categories": ["Happiness", "Life", "Philosophy"]
+  },
+  {
+    "id": 51,
+    "quote": "Get busy living or get busy dying.",
+    "author": "Stephen King",
+    "categories": ["Life", "Courage", "Inspiration"]
+  },
+  {
+    "id": 52,
+    "quote": "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    "author": "Thomas A. Edison",
+    "categories": ["Success", "Inspiration", "Courage"]
+  },
+  {
+    "id": 53,
+    "quote": "If you want to live a happy life, tie it to a goal, not to people or things.",
+    "author": "Albert Einstein",
+    "categories": ["Happiness", "Success", "Life"]
+  },
+  {
+    "id": 54,
+    "quote": "Never let the fear of striking out keep you from playing the game.",
+    "author": "Babe Ruth",
+    "categories": ["Courage", "Success", "Inspiration"]
+  },
+  {
+    "id": 55,
+    "quote": "Money and success don't change people; they merely amplify what is already there.",
+    "author": "Will Smith",
+    "categories": ["Success", "Wisdom", "Life"]
+  },
+  {
+    "id": 56,
+    "quote": "Not how long, but how well you have lived is the main thing.",
+    "author": "Seneca",
+    "categories": ["Philosophy", "Life", "Wisdom"]
+  },
+  {
+    "id": 57,
+    "quote": "If life were predictable it would cease to be life, and be without flavor.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["Life", "Wisdom", "Happiness"]
+  },
+  {
+    "id": 58,
+    "quote": "In order to write about life first you must live it.",
+    "author": "Ernest Hemingway",
+    "categories": ["Life", "Courage", "Inspiration"]
+  },
+  {
+    "id": 59,
+    "quote": "The big lesson in life, baby, is never be scared of anyone or anything.",
+    "author": "Frank Sinatra",
+    "categories": ["Courage", "Life"]
+  },
+  {
+    "id": 60,
+    "quote": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "categories": ["Wisdom", "Inspiration", "Courage"]
+  },
+  {
+    "id": 61,
+    "quote": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "categories": ["Success", "Leadership", "Inspiration"]
+  },
+  {
+    "id": 62,
+    "quote": "All our dreams can come true, if we have the courage to pursue them.",
+    "author": "Walt Disney",
+    "categories": ["Courage", "Inspiration", "Success"]
+  },
+  {
+    "id": 63,
+    "quote": "Everything you've ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "categories": ["Courage", "Inspiration", "Success"]
+  },
+  {
+    "id": 64,
+    "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis",
+    "categories": ["Courage", "Inspiration", "Life"]
+  },
+  {
+    "id": 65,
+    "quote": "Try not to become a man of success. Rather become a man of value.",
+    "author": "Albert Einstein",
+    "categories": ["Wisdom", "Success", "Leadership"]
+  },
+  {
+    "id": 66,
+    "quote": "There is no substitute for hard work.",
+    "author": "Thomas A. Edison",
+    "categories": ["Success", "Leadership"]
+  },
+  {
+    "id": 67,
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "categories": ["Success", "Philosophy", "Wisdom"]
+  },
+  {
+    "id": 68,
+    "quote": "Go confidently in the direction of your dreams! Live the life you've imagined.",
+    "author": "Henry David Thoreau",
+    "categories": ["Inspiration", "Life", "Courage"]
+  },
+  {
+    "id": 69,
+    "quote": "I find that the harder I work, the more luck I seem to have.",
+    "author": "Thomas Jefferson",
+    "categories": ["Success", "Wisdom", "Humor"]
+  },
+  {
+    "id": 70,
+    "quote": "Leadership is the capacity to translate vision into reality.",
+    "author": "Warren Bennis",
+    "categories": ["Leadership", "Success"]
+  },
+  {
+    "id": 71,
+    "quote": "Innovation distinguishes between a leader and a follower.",
+    "author": "Steve Jobs",
+    "categories": ["Leadership", "Success", "Inspiration"]
+  },
+  {
+    "id": 72,
+    "quote": "A leader is one who knows the way, goes the way, and shows the way.",
+    "author": "John C. Maxwell",
+    "categories": ["Leadership", "Wisdom"]
+  },
+  {
+    "id": 73,
+    "quote": "Management is doing things right; leadership is doing the right things.",
+    "author": "Peter Drucker",
+    "categories": ["Leadership", "Success", "Wisdom"]
+  },
+  {
+    "id": 74,
+    "quote": "Before you are a leader, success is all about growing yourself. When you become a leader, success is all about growing others.",
+    "author": "Jack Welch",
+    "categories": ["Leadership", "Success"]
+  },
+  {
+    "id": 75,
+    "quote": "He who has a why to live can bear almost any how.",
+    "author": "Friedrich Nietzsche",
+    "categories": ["Philosophy", "Courage", "Life"]
+  },
+  {
+    "id": 76,
+    "quote": "Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.",
+    "author": "Jean-Paul Sartre",
+    "categories": ["Philosophy", "Life"]
+  },
+  {
+    "id": 77,
+    "quote": "One cannot step twice in the same river.",
+    "author": "Heraclitus",
+    "categories": ["Philosophy", "Wisdom", "Life"]
+  },
+  {
+    "id": 78,
+    "quote": "Knowing yourself is the beginning of all wisdom.",
+    "author": "Aristotle",
+    "categories": ["Philosophy", "Wisdom"]
+  },
+  {
+    "id": 79,
+    "quote": "Happiness depends upon ourselves.",
+    "author": "Aristotle",
+    "categories": ["Happiness", "Philosophy", "Wisdom"]
+  },
+  {
+    "id": 80,
+    "quote": "Waste no more time arguing about what a good man should be. Be one.",
+    "author": "Marcus Aurelius",
+    "categories": ["Philosophy", "Wisdom", "Leadership"]
+  },
+  {
+    "id": 81,
+    "quote": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius",
+    "categories": ["Philosophy", "Courage", "Happiness"]
+  },
+  {
+    "id": 82,
+    "quote": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius",
+    "categories": ["Happiness", "Philosophy", "Life"]
+  },
+  {
+    "id": 83,
+    "quote": "We suffer more often in imagination than in reality.",
+    "author": "Seneca",
+    "categories": ["Philosophy", "Wisdom", "Happiness"]
+  },
+  {
+    "id": 84,
+    "quote": "Luck is what happens when preparation meets opportunity.",
+    "author": "Seneca",
+    "categories": ["Philosophy", "Success", "Wisdom"]
+  },
+  {
+    "id": 85,
+    "quote": "It's not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus",
+    "categories": ["Philosophy", "Wisdom", "Life"]
+  },
+  {
+    "id": 86,
+    "quote": "No man is free who is not master of himself.",
+    "author": "Epictetus",
+    "categories": ["Philosophy", "Wisdom", "Courage"]
+  },
+  {
+    "id": 87,
+    "quote": "Science is organized knowledge. Wisdom is organized life.",
+    "author": "Immanuel Kant",
+    "categories": ["Science", "Wisdom", "Philosophy"]
+  },
+  {
+    "id": 88,
+    "quote": "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.",
+    "author": "Isaac Asimov",
+    "categories": ["Science", "Wisdom", "Life"]
+  },
+  {
+    "id": 89,
+    "quote": "Research is what I'm doing when I don't know what I'm doing.",
+    "author": "Wernher von Braun",
+    "categories": ["Science", "Humor"]
+  },
+  {
+    "id": 90,
+    "quote": "The first principle is that you must not fool yourself and you are the easiest person to fool.",
+    "author": "Richard P. Feynman",
+    "categories": ["Science", "Wisdom", "Philosophy"]
+  },
+  {
+    "id": 91,
+    "quote": "I would rather have questions that can't be answered than answers that can't be questioned.",
+    "author": "Richard P. Feynman",
+    "categories": ["Science", "Philosophy", "Wisdom"]
+  },
+  {
+    "id": 92,
+    "quote": "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist.",
+    "author": "Stephen Hawking",
+    "categories": ["Science", "Inspiration", "Life"]
+  },
+  {
+    "id": 93,
+    "quote": "Intelligence is the ability to adapt to change.",
+    "author": "Stephen Hawking",
+    "categories": ["Science", "Wisdom", "Success"]
+  },
+  {
+    "id": 94,
+    "quote": "A day without laughter is a day wasted.",
+    "author": "Charlie Chaplin",
+    "categories": ["Humor", "Happiness", "Life"]
+  },
+  {
+    "id": 95,
+    "quote": "I'm an idealist. I don't know where I'm going, but I'm on my way.",
+    "author": "Carl Sandburg",
+    "categories": ["Humor", "Life", "Inspiration"]
+  },
+  {
+    "id": 96,
+    "quote": "Never put off till tomorrow what may be done day after tomorrow just as well.",
+    "author": "Mark Twain",
+    "categories": ["Humor", "Life"]
+  },
+  {
+    "id": 97,
+    "quote": "The cure for boredom is curiosity. There is no cure for curiosity.",
+    "author": "Dorothy Parker",
+    "categories": ["Humor", "Wisdom", "Inspiration"]
+  },
+  {
+    "id": 98,
+    "quote": "I refuse to join any club that would have me as a member.",
+    "author": "Groucho Marx",
+    "categories": ["Humor"]
+  },
+  {
+    "id": 99,
+    "quote": "Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read.",
+    "author": "Groucho Marx",
+    "categories": ["Humor"]
+  },
+  {
+    "id": 100,
+    "quote": "For every minute you are angry you lose sixty seconds of happiness.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["Happiness", "Wisdom", "Life"]
+  }
+]
