@@ -1,8 +1,10 @@
+import csv
+import io
 import json
 import os
 import random
 from collections import Counter
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, Response, jsonify, render_template, request
 
 app = Flask(__name__)
 
@@ -123,6 +125,37 @@ def get_random_quote():
             "pool_size": len(pool),
             "quote": selected,
         }
+    )
+
+
+@app.route("/api/quotes/export")
+def export_quotes_csv():
+    """Export matching quotes as a downloadable CSV file."""
+    author = request.args.get("author", "")
+    category = request.args.get("category", "")
+    query = request.args.get("q", "")
+
+    matched = filter_quotes(QUOTES, author=author, category=category, query=query)
+
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow(["ID", "Quote", "Author", "Categories"])
+
+    for item in matched:
+        writer.writerow(
+            [
+                item["id"],
+                item["quote"],
+                item["author"],
+                "; ".join(item.get("categories", [])),
+            ]
+        )
+
+    csv_content = output.getvalue()
+    return Response(
+        csv_content,
+        mimetype="text/csv; charset=utf-8",
+        headers={"Content-Disposition": 'attachment; filename="quotes.csv"'},
     )
 
 

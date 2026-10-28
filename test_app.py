@@ -33,6 +33,8 @@ def test_index_page(client):
     html = response.data.decode("utf-8")
     assert "QuoteVault" in html
     assert "Search by Author" in html
+    assert "Copy to Clipboard" in html
+    assert "Export to CSV" in html
 
 
 def test_meta_endpoint(client):
@@ -96,3 +98,23 @@ def test_quotes_search_by_author_and_category(client):
     for q in combined_data["quotes"]:
         assert "Einstein" in q["author"]
         assert "Science" in q["categories"]
+
+
+def test_export_quotes_csv(client):
+    """Verify /api/quotes/export returns a valid CSV attachment and respects filters."""
+    res_all = client.get("/api/quotes/export")
+    assert res_all.status_code == 200
+    assert "text/csv" in res_all.headers["Content-Type"]
+    assert 'attachment; filename="quotes.csv"' in res_all.headers["Content-Disposition"]
+    csv_lines = [
+        line for line in res_all.data.decode("utf-8").strip().splitlines() if line
+    ]
+    assert csv_lines[0] == "ID,Quote,Author,Categories"
+    assert len(csv_lines) == 101  # 1 header + 100 quotes
+
+    # Filtered CSV export
+    res_filtered = client.get("/api/quotes/export?author=Einstein&category=Science")
+    assert res_filtered.status_code == 200
+    filtered_text = res_filtered.data.decode("utf-8")
+    assert "Albert Einstein" in filtered_text
+    assert "Mark Twain" not in filtered_text

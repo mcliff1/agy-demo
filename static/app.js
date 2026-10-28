@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryPills = document.getElementById("category-pills");
   const btnClearFilters = document.getElementById("btn-clear-filters");
   const btnEmptyReset = document.getElementById("btn-empty-reset");
+  const btnExportCsv = document.getElementById("btn-export-csv");
 
   const resultsCount = document.getElementById("results-count");
   const activeFiltersSummary = document.getElementById("active-filters-summary");
@@ -50,15 +51,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2200);
   }
 
-  async function copyQuoteToClipboard(quoteObj) {
+  async function copyQuoteToClipboard(quoteObj, triggerBtn = null) {
     if (!quoteObj) return;
     const formatted = `"${quoteObj.quote}" — ${quoteObj.author}`;
     try {
-      await navigator.clipboard.writeText(formatted);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(formatted);
+      } else {
+        const tempInput = document.createElement("textarea");
+        tempInput.value = formatted;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+      }
       showToast("Quote copied to clipboard!");
     } catch {
       showToast(`Copied: ${formatted}`);
     }
+
+    if (triggerBtn) {
+      const originalText = triggerBtn.dataset.originalText || triggerBtn.textContent;
+      triggerBtn.dataset.originalText = originalText;
+      triggerBtn.textContent = "Copied!";
+      triggerBtn.classList.add("copied");
+      setTimeout(() => {
+        triggerBtn.textContent = originalText;
+        triggerBtn.classList.remove("copied");
+      }, 1500);
+    }
+  }
+
+  function exportQuotesToCsv() {
+    if (!state.matchingQuotes || state.matchingQuotes.length === 0) {
+      showToast("No quotes available to export.");
+      return;
+    }
+    const params = new URLSearchParams();
+    if (state.authorFilter) params.set("author", state.authorFilter);
+    if (state.categoryFilter) params.set("category", state.categoryFilter);
+
+    const queryString = params.toString();
+    const downloadUrl = queryString
+      ? `/api/quotes/export?${queryString}`
+      : "/api/quotes/export";
+
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = "quotes.csv";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast(`Exported ${state.matchingQuotes.length} quotes to CSV!`);
   }
 
   function renderSpotlight(quoteObj, labelText = "Featured Random Quote") {
@@ -194,6 +238,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderQuotesGrid(quotes) {
     quotesGrid.innerHTML = "";
     resultsCount.textContent = `(${quotes.length} of ${state.totalQuotes})`;
+    if (btnExportCsv) {
+      btnExportCsv.disabled = quotes.length === 0;
+    }
 
     if (quotes.length === 0) {
       emptyState.hidden = false;
@@ -227,9 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const copyBtn = document.createElement("button");
       copyBtn.type = "button";
-      copyBtn.className = "card-btn";
-      copyBtn.textContent = "Copy";
-      copyBtn.addEventListener("click", () => copyQuoteToClipboard(q));
+      copyBtn.className = "card-btn copy-to-clipboard-btn";
+      copyBtn.textContent = "Copy to Clipboard";
+      copyBtn.addEventListener("click", () => copyQuoteToClipboard(q, copyBtn));
 
       actionsDiv.appendChild(featureBtn);
       actionsDiv.appendChild(copyBtn);
@@ -313,7 +360,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event Listeners
   btnRandomAll.addEventListener("click", () => fetchRandomQuote({ useFilters: false }));
   btnRandomFiltered.addEventListener("click", () => fetchRandomQuote({ useFilters: true }));
-  btnCopySpotlight.addEventListener("click", () => copyQuoteToClipboard(state.currentSpotlight));
+  btnCopySpotlight.addEventListener("click", () => copyQuoteToClipboard(state.currentSpotlight, btnCopySpotlight));
+  if (btnExportCsv) {
+    btnExportCsv.addEventListener("click", exportQuotesToCsv);
+  }
 
   spotlightAuthor.addEventListener("click", () => {
     const author = spotlightAuthor.dataset.author;

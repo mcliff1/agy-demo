@@ -50,7 +50,8 @@
             Random from Current Filter
           </button>
           <button type="button" class="btn btn-ghost" id="btn-copy-spotlight">
-            Copy Quote
+            <span class="btn-icon" aria-hidden="true">&#x1F4CB;</span>
+            Copy to Clipboard
           </button>
         </div>
       </div>
@@ -100,11 +101,17 @@
     <!-- Results Section -->
     <section class="results-section" aria-labelledby="results-heading">
       <div class="results-toolbar">
-        <h2 id="results-heading">
-          Matching Quotes
-          <span class="results-count" id="results-count">(100 of 100)</span>
-        </h2>
-        <div class="active-filters-summary" id="active-filters-summary"></div>
+        <div class="results-title-group">
+          <h2 id="results-heading">
+            Matching Quotes
+            <span class="results-count" id="results-count">(100 of 100)</span>
+          </h2>
+          <div class="active-filters-summary" id="active-filters-summary"></div>
+        </div>
+        <button type="button" class="btn btn-export" id="btn-export-csv" title="Export displayed quotes to a CSV file">
+          <span class="btn-icon" aria-hidden="true">&#x2B07;</span>
+          Export to CSV
+        </button>
       </div>
 
       <div id="empty-state" class="empty-state" hidden>
